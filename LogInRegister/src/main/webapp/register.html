@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* General body styling for centering and background */
+        body {
+            font-family: 'Inter', sans-serif; /* Apply Inter font */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Full viewport height */
+            margin: 0;
+            background-color: #f0f2f5; /* Light grey background */
+            padding: 20px; /* Add some padding for smaller screens */
+            box-sizing: border-box; /* Include padding in element's total width and height */
+        }
+
+        /* Form container styling */
+        form {
+            background-color: #ffffff; /* White background for the form */
+            padding: 40px;
+            border-radius: 12px; /* Rounded corners for the form */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+            display: flex;
+            flex-direction: column;
+            width: 100%; /* Take full width of parent (which is max-width limited) */
+            max-width: 400px; /* Max width for the form */
+            gap: 20px; /* Space between form elements */
+            box-sizing: border-box;
+        }
+
+        /* Input field styling (text and password) */
+        input[type="text"],
+        input[type="password"],
+        input[type="email"] { /* Added email type for consistent styling */
+            padding: 14px 18px;
+            border: 1px solid #d1d5db; /* Light grey border */
+            border-radius: 8px; /* Slightly rounded corners for inputs */
+            font-size: 16px;
+            color: #374151; /* Darker text color */
+            outline: none; /* Remove default outline */
+            transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for focus */
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus,
+        input[type="email"]:focus {
+            border-color: #3b82f6; /* Blue border on focus */
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25); /* Light blue shadow on focus */
+        }
+
+        /* Submit button styling */
+        input[type="submit"] {
+            background-color: #3b82f6; /* Blue background */
+            color: white; /* White text */
+            padding: 14px 20px;
+            border: none;
+            border-radius: 8px; /* Rounded corners */
+            font-size: 18px;
+            font-weight: 600; /* Semi-bold text */
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
+            box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3); /* Soft shadow for button */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #2563eb; /* Darker blue on hover */
+            transform: translateY(-2px); /* Slight lift effect */
+        }
+
+        input[type="submit"]:active {
+            transform: translateY(0); /* Return to original position on click */
+            box-shadow: 0 2px 5px rgba(59, 130, 246, 0.3); /* Smaller shadow on click */
+        }
+
+        /* Link styling */
+        a {
+            text-align: center;
+            color: #3b82f6; /* Blue link color */
+            text-decoration: none; /* Remove underline */
+            font-size: 15px;
+            transition: color 0.3s ease; /* Smooth color transition */
+        }
+
+        a:hover {
+            color: #2563eb; /* Darker blue on hover */
+            text-decoration: underline; /* Underline on hover */
+        }
+    </style>
+</head>
+<body>
+<form action="reg" style="display:flex; flex-direction:column; width:50%">
+	
+	<input type="text" placeholder="Enter User Name" name="user">
+	<input type="mail" placeholder="Enter User mail" name="mail">
+	<input type="text" placeholder="Enter User Password" name="pass">
+	
+	<input type="submit" value="Register">
+	<a href="login.html">Already existed User?</a>
+</form>
+</body>
+</html>
